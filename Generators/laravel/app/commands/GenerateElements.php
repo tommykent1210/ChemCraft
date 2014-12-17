@@ -40,6 +40,7 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 		//
 		$GenHelper = new GenHelper();
 		$key = '1erWA95MmGF30nQcCpx4h89Z5kxwmbjFv04JSM5nCsoU';
+		$radioactiveRange = 10;
 
 
 		$this->line("--[ Building Elements: Started]--", 'yellow');
@@ -115,7 +116,8 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	        			"ToolClass" => $element["ToolClass"],
 	        			"ToolTier" => $element["ToolTier"],
 	        			"Hardness" => $element["Hardness"],
-	        			"Radioactive" => $element["Radioactive"]
+	        			"Radioactive" => $element["Radioactive"],
+	        			"RadioactiveRange" => $radioactiveRange
 	        			));
 
 					//add to worldgen stuff

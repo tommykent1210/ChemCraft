@@ -3,7 +3,7 @@
   "modid": "ChemCraft",
   "name": "ChemCraft",
   "description": "Adds all elements from the periodic table, and a whole plethora of crafting recipes!",
-  "version": "${version}",
+  "version": "1.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",

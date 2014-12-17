@@ -10,6 +10,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import java.util.List;
+import java.util.Random;
+import net.minecraft.util.AxisAlignedBB;
 
 public class oreRadium extends Block{
 
@@ -27,16 +30,30 @@ public class oreRadium extends Block{
 		setHardness(5F);
 	}
 
-	public void onEntityWalking(World world, int p_149724_2_, int p_149724_3_, int p_149724_4_, Entity entity)
-    {
-		System.out.println("Player Stepped on Radioactive Block!!");
-        if (entity instanceof EntityLiving) {
-        	((EntityLiving)entity).addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
-        }
-        if (entity instanceof EntityPlayer) {
-        	((EntityPlayer)entity).addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
-        }
-    }
+	// update the block on tick and if player is within range, make them
+	// poisoned
+	public void updateTick(World world, int x, int y, int z, Random rand) {
+		System.out.println("X:" + x + ", Y:" + y + ", Z:" + z);
+		List playerList = world.getEntitiesWithinAABB(EntityPlayer.class,
+				AxisAlignedBB.getBoundingBox(x - 10, y - 10, z - 10, x + 10, y + 10,
+						z + 10));
+		if (playerList.size() > 0) {
+			System.out.println("Player near uranium!");
+			System.out.println(playerList);
+			for (int i = 0; i < playerList.size(); i++) {
+				EntityPlayer p = (EntityPlayer)playerList.get(i);
+				p.addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
+			}
+			//((EntityPlayer)entity).addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
+		}
+
+	}
+
+	// when player adds block to the world, make it radioactive ^_^
+	public void onBlockAdded(World world, int x, int y, int z) {
+		Block b = world.getBlock(x, y, z);
+		b.setTickRandomly(true);
+	}
 		
 	
 }
