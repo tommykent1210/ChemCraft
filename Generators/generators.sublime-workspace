@@ -1,0 +1,523 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tint",
+				"tinthex"
+			],
+			[
+				"base",
+				"baseTexture"
+			],
+			[
+				"cop",
+				"copyLocation"
+			],
+			[
+				"Gen",
+				"GenHelper"
+			],
+			[
+				"texture",
+				"textureFile"
+			],
+			[
+				"im",
+				"imageNew"
+			],
+			[
+				"image",
+				"imageNew"
+			],
+			[
+				"ima",
+				"imageNew"
+			],
+			[
+				"bautec_header",
+				"bautec_headerlines"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"baut",
+				"bautec_whitebox"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+			"settings":
+			{
+				"buffer_size": 20325,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
+			"settings":
+			{
+				"buffer_size": 1272,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "laravel/app/routes.php",
+			"settings":
+			{
+				"buffer_size": 553,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/www/app/controllers/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 587,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/www/app/controllers/ImageController.php",
+			"settings":
+			{
+				"buffer_size": 1004,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/app/libraries/GenHelper.php",
+			"settings":
+			{
+				"buffer_size": 4895,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/www/app/commands/GenerateItems.php",
+			"settings":
+			{
+				"buffer_size": 3729,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/app/config/gen.php",
+			"settings":
+			{
+				"buffer_size": 972,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/www/app/start/artisan.php",
+			"settings":
+			{
+				"buffer_size": 512,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Generators/laravel/app/controllers/ImageController.php",
+		"/Users/Tom/Dropbox/ZineUK/Development/Parcel Shipper/Site/public/assets/scss/partials/_functions.scss",
+		"/private/var/folders/vg/n4lxy4mx2_32jqmp7t45mm6h0000gn/T/fz3temp-1/top_header.php",
+		"/Users/Tom/Google Drive/Web Development/Assets/codecanyon-8870728-freelancer-office/FreelancerOffice-v1.5.7/application/modules/fopdf/controllers/fopdf.php",
+		"/private/var/folders/vg/n4lxy4mx2_32jqmp7t45mm6h0000gn/T/fz3temp-1/fomailer.php",
+		"/private/var/folders/vg/n4lxy4mx2_32jqmp7t45mm6h0000gn/T/fz3temp-1/invoice.php",
+		"/Users/Tom/Google Drive/Web Development/Assets/codecanyon-8870728-freelancer-office/FreelancerOffice-v1.5.7/application/modules/fopdf/views/invoice.php",
+		"/Users/Tom/Google Drive/Web Development/Erik/Bautec/SITE/wp-content/themes/Bautec-theme/footer.php",
+		"/private/var/folders/vg/n4lxy4mx2_32jqmp7t45mm6h0000gn/T/fz3temp-1/page_blog.php",
+		"/private/var/folders/vg/n4lxy4mx2_32jqmp7t45mm6h0000gn/T/fz3temp-1/index.php",
+		"/private/var/folders/vg/n4lxy4mx2_32jqmp7t45mm6h0000gn/T/fz3temp-1/application.php",
+		"/Users/Tom/Desktop/database.php",
+		"/Users/Tom/Google Drive/Web Development/Erik/Bautec/SITE/wp-content/themes/Bautec-theme/library/admin.php",
+		"/Users/Tom/Google Drive/Web Development/Erik/Bautec/SITE/wp-content/themes/Bautec-theme/style.css",
+		"/Users/Tom/Google Drive/Web Development/Erik/First Site/site/app/views/templates/default.blade.php",
+		"/Users/Tom/Google Drive/Web Development/Erik/Bautec/SITE/wp-content/themes/Bautec-theme/library/bones.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/Tom/Google Drive/Web Development/Erik/BACKUPS/Bautec/FILES",
+			"/Users/Tom/Google Drive/Web Development/Erik/Bautec/SITE/wp-content",
+			"/Users/Tom/Google Drive/Web Development/Erik"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Wordpress",
+			"custom.js",
+			"custom",
+			"box_white",
+			"button-p"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+					"settings":
+					{
+						"buffer_size": 20325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19205,
+								19205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7500.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
+					"settings":
+					{
+						"buffer_size": 1272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								895,
+								895
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "laravel/app/routes.php",
+					"settings":
+					{
+						"buffer_size": 553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								467,
+								467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/wamp/www/app/controllers/HomeController.php",
+					"settings":
+					{
+						"buffer_size": 587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/wamp/www/app/controllers/ImageController.php",
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/wamp/www/app/libraries/GenHelper.php",
+					"settings":
+					{
+						"buffer_size": 4895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4328,
+								4328
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1460.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/wamp/www/app/commands/GenerateItems.php",
+					"settings":
+					{
+						"buffer_size": 3729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2948,
+								2948
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 691.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/wamp/www/app/config/gen.php",
+					"settings":
+					{
+						"buffer_size": 972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/wamp/www/app/start/artisan.php",
+					"settings":
+					{
+						"buffer_size": 512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,120 @@
+Name,ID,Number,Symbol,Type,State,Rarity,Spawn_Rate,Radioactive,ItemName,Generate_Ore,Texture,Texture_still,Texture_moving,Hardness,ToolClass,ToolTier,OreName,Found Naturally
+# Safe Name for us,The ID,Atomic number (probably not much use),"Atomic Symbol (Again, not much use?)","Type of block, not sure what options there are here?","The state (SOLID, LIQUID, GAS), probably used to create the block/liquid?","The rarity, don't know how this will be used?","We can tweak the spawning at world gen. Not sure on a ""normal"" level. Aluminium is pretty abundant?",Is it radioactive? If TRUE it will damage the palyer,The item dropped (the block name unless different),"Should the Ore be generated? Leaves room for ""experimental"" elements that can only be obtained.",The texture name. Leave blank for a liquid,"The ""still"" texture for a liquid. Leave blank for block","The ""moving"" texture for a liquid. Leave blank for block.","0.5 for dirt, 50 for obsidian","""pickaxe"", ""shovel"", or ""axe""","The tier is 0 for wood, 1 for stone, 2 for iron, and 3 for diamond.",The ore name for the block (ores only of course). Leave blank for gasses/fluids,Is this found naturally?
+Hydrogen,GasHydrogen,1,H,Gas,GAS,,,FALSE,GasHydrogen,FALSE,,,,5,pickaxe,1,,FALSE
+Helium,GasHelium,2,He,Gas,GAS,,,FALSE,GasHelium,FALSE,,,,5,pickaxe,1,,FALSE
+Lithium,OreLithium,3,Li,Ore,SOLID,,,FALSE,OreLithium,TRUE,,,,5,pickaxe,1,Lithium Ore,TRUE
+Beryllium,MineralBeryllium,4,Be,Mineral,SOLID,,,FALSE,Bertrandite,FALSE,OreBeryllium,,,5,pickaxe,1,Bertrandite,FALSE
+Boron,OreBoron,5,B,Ore,SOLID,,,FALSE,OreBoron,TRUE,,,,5,pickaxe,1,Boron Ore,TRUE
+Carbon,OreCarbon,6,C,Ore,SOLID,,,FALSE,OreCarbon,TRUE,OreCarbon,,,5,pickaxe,1,Carbon Ore,TRUE
+Nitrogen,GasNitrogen,7,N,Gas,GAS,,,FALSE,GasNitrogen,FALSE,,,,5,pickaxe,1,,FALSE
+Oxygen,GasOxygen,8,O,Gas,GAS,,,FALSE,GasOxygen,FALSE,,,,5,pickaxe,1,,FALSE
+Fluorine,GasFluorine,9,F,Gas,GAS,,,FALSE,GasFluorine,FALSE,,,,5,pickaxe,1,,FALSE
+Neon,GasNeon,10,Ne,Gas,GAS,,,FALSE,GasNeon,FALSE,,,,5,pickaxe,1,,FALSE
+Sodium,OreSodium,11,Na,Ore,SOLID,,,FALSE,OreSodium,TRUE,OreSodium,,,5,pickaxe,1,Sodium Ore,TRUE
+Magnesium,OreMagnesium,12,Mg,Ore,SOLID,,,FALSE,OreMagnesium,TRUE,OreMagnesium,,,5,pickaxe,1,Magnesium Ore,TRUE
+Aluminium,OreAluminium,13,Al,Ore,SOLID,COMMON,80,FALSE,OreAluminium,TRUE,OreBauxite,,,5,pickaxe,1,Aluminium Ore,TRUE
+Silicon,OreSilicon,14,Si,Ore,SOLID,,,FALSE,OreSilicon,TRUE,OreSilicon,,,5,pickaxe,1,Silicon Ore,TRUE
+Phosphorus,OrePhosphorus,15,P,Ore,SOLID,,,FALSE,OrePhosphorus,TRUE,OrePhosphorus,,,5,pickaxe,1,Phosphorus Ore,TRUE
+Sulfur,OreSulfur,16,S,Ore,SOLID,,,FALSE,OreSulfur,TRUE,OreSulphur,,,5,pickaxe,1,Sulfur Ore,TRUE
+Chlorine,GasChlorine,17,Cl,Gas,GAS,,,FALSE,GasChlorine,FALSE,,,,5,pickaxe,1,,FALSE
+Argon,GasArgon,18,Ar,Gas,GAS,,,FALSE,GasArgon,FALSE,,,,5,pickaxe,1,,FALSE
+Potassium,OrePotassium,19,K,Ore,SOLID,,,FALSE,OrePotassium,TRUE,OrePotassium,,,5,pickaxe,1,Potassium Ore,TRUE
+Calcium,OreCalcium,20,Ca,Ore,SOLID,,,FALSE,OreCalcium,FALSE,,,,5,pickaxe,1,Calcium Ore,FALSE
+Scandium,OreScandium,21,Sc,Ore,SOLID,,,FALSE,OreScandium,TRUE,OreScandium,,,5,pickaxe,1,Scandium Ore,TRUE
+Titanium,OreTitanium,22,Ti,Ore,SOLID,,,FALSE,OreTitanium,TRUE,OreTitanium,,,5,pickaxe,1,Titanium Ore,TRUE
+Vanadium,OreVanadium,23,V,Ore,SOLID,,,FALSE,OreVanadium,TRUE,,,,5,pickaxe,1,Vanadium Ore,TRUE
+Chromium,OreChromium,24,Cr,Ore,SOLID,,,FALSE,OreChromium,TRUE,,,,5,pickaxe,1,Chromium Ore,TRUE
+Manganese,OreManganese,25,Mn,Ore,SOLID,,,FALSE,OreManganese,TRUE,,,,5,pickaxe,1,Manganese Ore,TRUE
+Iron,OreIron,26,Fe,Ore,SOLID,,,FALSE,OreIron,TRUE,,,,5,pickaxe,1,Iron Ore,TRUE
+Cobalt,OreCobalt,27,Co,Ore,SOLID,,,FALSE,OreCobalt,TRUE,,,,5,pickaxe,1,Cobalt Ore,TRUE
+Nickel,OreNickel,28,Ni,Ore,SOLID,,,FALSE,OreNickel,TRUE,,,,5,pickaxe,1,Nickel Ore,TRUE
+Copper,OreCopper,29,Cu,Ore,SOLID,,,FALSE,OreCopper,TRUE,,,,5,pickaxe,1,Copper Ore,TRUE
+Zinc,OreZinc,30,Zn,Ore,SOLID,,,FALSE,OreZinc,TRUE,,,,5,pickaxe,1,Zinc Ore,TRUE
+Gallium,OreGallium,31,Ga,Ore,SOLID,,,FALSE,OreGallium,TRUE,,,,5,pickaxe,1,Gallium Ore,TRUE
+Germanium,OreGermanium,32,Ge,Ore,SOLID,,,FALSE,OreGermanium,TRUE,,,,5,pickaxe,1,Germanium Ore,TRUE
+Arsenic,OreArsenic,33,As,Ore,SOLID,,,FALSE,OreArsenic,TRUE,,,,5,pickaxe,1,Arsenic Ore,TRUE
+Selenium,OreSelenium,34,Se,Ore,SOLID,,,FALSE,OreSelenium,TRUE,,,,5,pickaxe,1,Selenium Ore,TRUE
+Bromine,GasBromine,35,Br,Gas,GAS,,,FALSE,GasBromine,FALSE,,,,5,pickaxe,1,,FALSE
+Krypton,OreKrypton,36,Kr,Ore,SOLID,,,FALSE,OreKrypton,TRUE,,,,5,pickaxe,1,Krypton Ore,TRUE
+Rubidium,OreRubidium,37,Rb,Ore,SOLID,,,FALSE,OreRubidium,TRUE,,,,5,pickaxe,1,Rubidium Ore,TRUE
+Strontium,OreStrontium,38,Sr,Ore,SOLID,,,FALSE,OreStrontium,TRUE,,,,5,pickaxe,1,Strontium Ore,TRUE
+Yttrium,OreYttrium,39,Y,Ore,SOLID,,,FALSE,OreYttrium,TRUE,,,,5,pickaxe,1,Yttrium Ore,TRUE
+Zirconium,OreZirconium,40,Zr,Ore,SOLID,,,FALSE,OreZirconium,TRUE,,,,5,pickaxe,1,Zirconium Ore,TRUE
+Niobium,OreNiobium,41,Nb,Ore,SOLID,,,FALSE,OreNiobium,TRUE,,,,5,pickaxe,1,Niobium Ore,TRUE
+Molybdenum,OreMolybdenum,42,Mo,Ore,SOLID,,,FALSE,OreMolybdenum,TRUE,,,,5,pickaxe,1,Molybdenum Ore,TRUE
+Technetium,ExperimentalTechnetium,43,Tc,Experimental,SOLID,,,TRUE,ExperimentalTechnetium,FALSE,,,,5,pickaxe,1,,FALSE
+Ruthenium,OreRuthenium,44,Ru,Ore,SOLID,,,FALSE,OreRuthenium,TRUE,,,,5,pickaxe,1,Ruthenium Ore,TRUE
+Rhodium,OreRhodium,45,Rh,Ore,SOLID,,,FALSE,OreRhodium,TRUE,,,,5,pickaxe,1,Rhodium Ore,TRUE
+Palladium,OrePalladium,46,Pd,Ore,SOLID,,,FALSE,OrePalladium,TRUE,,,,5,pickaxe,1,Palladium Ore,TRUE
+Silver,OreSilver,47,Ag,Ore,SOLID,,,FALSE,OreSilver,TRUE,,,,5,pickaxe,1,Silver Ore,TRUE
+Cadmium,OreCadmium,48,Cd,Ore,SOLID,,,FALSE,OreCadmium,TRUE,,,,5,pickaxe,1,Cadmium Ore,TRUE
+Indium,OreIndium,49,In,Ore,SOLID,,,FALSE,OreIndium,TRUE,,,,5,pickaxe,1,Indium Ore,TRUE
+Tin,OreTin,50,Sn,Ore,SOLID,,,FALSE,OreTin,TRUE,,,,5,pickaxe,1,Tin Ore,TRUE
+Antimony,OreAntimony,51,Sb,Ore,SOLID,,,FALSE,OreAntimony,TRUE,,,,5,pickaxe,1,Antimony Ore,TRUE
+Tellurium,OreTellurium,52,Te,Ore,SOLID,,,FALSE,OreTellurium,TRUE,,,,5,pickaxe,1,Tellurium Ore,TRUE
+Iodine,OreIodine,53,I,Ore,SOLID,,,FALSE,OreIodine,TRUE,,,,5,pickaxe,1,Iodine Ore,TRUE
+Xenon,GasXenon,54,Xe,Gas,GAS,,,FALSE,GasXenon,FALSE,,,,5,pickaxe,1,,FALSE
+Caesium,OreCaesium,55,Cs,Ore,SOLID,,,FALSE,OreCaesium,TRUE,,,,5,pickaxe,1,Caesium Ore,TRUE
+Barium,OreBarium,56,Ba,Ore,SOLID,,,FALSE,OreBarium,TRUE,,,,5,pickaxe,1,Barium Ore,TRUE
+Lanthanum,OreLanthanum,57,La,Ore,SOLID,,,FALSE,OreLanthanum,TRUE,,,,5,pickaxe,1,Lanthanum Ore,TRUE
+Cerium,OreCerium,58,Ce,Ore,SOLID,,,FALSE,OreCerium,TRUE,,,,5,pickaxe,1,Cerium Ore,TRUE
+Praseodymium,OrePraseodymium,59,Pr,Ore,SOLID,,,FALSE,OrePraseodymium,TRUE,,,,5,pickaxe,1,Praseodymium Ore,TRUE
+Neodymium,OreNeodymium,60,Nd,Ore,SOLID,,,FALSE,OreNeodymium,TRUE,,,,5,pickaxe,1,Neodymium Ore,TRUE
+Promethium,ExperimentalPromethium,61,Pm,Experimental,SOLID,,,TRUE,ExperimentalPromethium,FALSE,,,,5,pickaxe,1,,FALSE
+Samarium,OreSamarium,62,Sm,Ore,SOLID,,,FALSE,OreSamarium,TRUE,,,,5,pickaxe,1,Samarium Ore,TRUE
+Europium,OreEuropium,63,Eu,Ore,SOLID,,,FALSE,OreEuropium,TRUE,,,,5,pickaxe,1,Europium Ore,TRUE
+Gadolinium,OreGadolinium,64,Gd,Ore,SOLID,,,FALSE,OreGadolinium,TRUE,,,,5,pickaxe,1,Gadolinium Ore,TRUE
+Terbium,OreTerbium,65,Tb,Ore,SOLID,,,FALSE,OreTerbium,TRUE,,,,5,pickaxe,1,Terbium Ore,TRUE
+Dysprosium,OreDysprosium,66,Dy,Ore,SOLID,,,FALSE,OreDysprosium,TRUE,,,,5,pickaxe,1,Dysprosium Ore,TRUE
+Holmium,OreHolmium,67,Ho,Ore,SOLID,,,FALSE,OreHolmium,TRUE,,,,5,pickaxe,1,Holmium Ore,TRUE
+Erbium,OreErbium,68,Er,Ore,SOLID,,,FALSE,OreErbium,TRUE,,,,5,pickaxe,1,Erbium Ore,TRUE
+Thulium,OreThulium,69,Tm,Ore,SOLID,,,FALSE,OreThulium,TRUE,,,,5,pickaxe,1,Thulium Ore,TRUE
+Ytterbium,OreYtterbium,70,Yb,Ore,SOLID,,,FALSE,OreYtterbium,TRUE,,,,5,pickaxe,1,Ytterbium Ore,TRUE
+Lutetium,OreLutetium,71,Lu,Ore,SOLID,,,FALSE,OreLutetium,TRUE,,,,5,pickaxe,1,Lutetium Ore,TRUE
+Hafnium,OreHafnium,72,Hf,Ore,SOLID,,,FALSE,OreHafnium,TRUE,,,,5,pickaxe,1,Hafnium Ore,TRUE
+Tantalum,OreTantalum,73,Ta,Ore,SOLID,,,FALSE,OreTantalum,TRUE,,,,5,pickaxe,1,Tantalum Ore,TRUE
+Tungsten,OreTungsten,74,W,Ore,SOLID,,,FALSE,OreTungsten,TRUE,,,,5,pickaxe,1,Tungsten Ore,TRUE
+Rhenium,OreRhenium,75,Re,Ore,SOLID,,,FALSE,OreRhenium,TRUE,,,,5,pickaxe,1,Rhenium Ore,TRUE
+Osmium,OreOsmium,76,Os,Ore,SOLID,,,FALSE,OreOsmium,TRUE,,,,5,pickaxe,1,Osmium Ore,TRUE
+Iridium,OreIridium,77,Ir,Ore,SOLID,,,FALSE,OreIridium,TRUE,,,,5,pickaxe,1,Iridium Ore,TRUE
+Platinum,OrePlatinum,78,Pt,Ore,SOLID,,,FALSE,OrePlatinum,TRUE,,,,5,pickaxe,1,Platinum Ore,TRUE
+Gold,OreGold,79,Au,Ore,SOLID,,,FALSE,OreGold,TRUE,,,,5,pickaxe,1,Gold Ore,TRUE
+Mercury,OreMercury,80,Hg,Ore,SOLID,,,FALSE,OreMercury,TRUE,,,,5,pickaxe,1,Mercury Ore,TRUE
+Thallium,OreThallium,81,Tl,Ore,SOLID,,,FALSE,OreThallium,TRUE,,,,5,pickaxe,1,Thallium Ore,TRUE
+Lead,OreLead,82,Pb,Ore,SOLID,,,FALSE,OreLead,TRUE,,,,5,pickaxe,1,Lead Ore,TRUE
+Bismuth,OreBismuth,83,Bi,Ore,SOLID,,,FALSE,OreBismuth,TRUE,,,,5,pickaxe,1,Bismuth Ore,TRUE
+Polonium,OrePolonium,84,Po,Ore,SOLID,,,TRUE,OrePolonium,TRUE,,,,5,pickaxe,1,Polonium Ore,TRUE
+Astatine,ExperimentalAstatine,85,At,Experimental,SOLID,,,TRUE,ExperimentalAstatine,FALSE,,,,5,pickaxe,1,,FALSE
+Radon,GasRadon,86,Rn,Gas,GAS,,,TRUE,GasRadon,FALSE,,,,5,pickaxe,1,,FALSE
+Francium,ExperimentalFrancium,87,Fr,Experimental,SOLID,,,TRUE,ExperimentalFrancium,FALSE,,,,5,pickaxe,1,,FALSE
+Radium,OreRadium,88,Ra,Ore,SOLID,,,TRUE,OreRadium,TRUE,,,,5,pickaxe,1,Radium Ore,TRUE
+Actinium,OreActinium,89,Ac,Ore,SOLID,RARE,,TRUE,OreActinium,TRUE,,,,5,pickaxe,1,Actinium Ore,TRUE
+Thorium,OreThorium,90,Th,Ore,SOLID,,,TRUE,OreThorium,TRUE,,,,5,pickaxe,1,Thorium Ore,TRUE
+Protactinium,OreProtactinium,91,Pa,Ore,SOLID,,,TRUE,OreProtactinium,TRUE,,,,5,pickaxe,1,Protactinium Ore,TRUE
+Uranium,OreUranium,92,U,Ore,SOLID,,,TRUE,OreUranium,TRUE,,,,5,pickaxe,1,Uranium Ore,TRUE
+Neptunium,ExperimentalNeptunium,93,Np,Experimental,SOLID,,,TRUE,ExperimentalNeptunium,FALSE,,,,5,pickaxe,1,,FALSE
+Plutonium,ExperimentalPlutonium,94,Pu,Experimental,SOLID,,,TRUE,ExperimentalPlutonium,FALSE,,,,5,pickaxe,1,,FALSE
+Americium,ExperimentalAmericium,95,Am,Experimental,SOLID,,,TRUE,ExperimentalAmericium,FALSE,,,,5,pickaxe,1,,FALSE
+Curium,ExperimentalCurium,96,Cm,Experimental,SOLID,,,TRUE,ExperimentalCurium,FALSE,,,,5,pickaxe,1,,FALSE
+Berkelium,ExperimentalBerkelium,97,Bk,Experimental,SOLID,,,TRUE,ExperimentalBerkelium,FALSE,,,,5,pickaxe,1,,FALSE
+Californium,ExperimentalCalifornium,98,Cf,Experimental,SOLID,,,TRUE,ExperimentalCalifornium,FALSE,,,,5,pickaxe,1,,FALSE
+Einsteinium,ExperimentalEinsteinium,99,Es,Experimental,SOLID,,,TRUE,ExperimentalEinsteinium,FALSE,,,,5,pickaxe,1,,FALSE
+Fermium,ExperimentalFermium,100,Fm,Experimental,SOLID,,,TRUE,ExperimentalFermium,FALSE,,,,5,pickaxe,1,,FALSE
+Mendelevium,ExperimentalMendelevium,101,Md,Experimental,SOLID,,,TRUE,ExperimentalMendelevium,FALSE,,,,5,pickaxe,1,,FALSE
+Nobelium,ExperimentalNobelium,102,No,Experimental,SOLID,,,TRUE,ExperimentalNobelium,FALSE,,,,5,pickaxe,1,,FALSE
+Lawrencium,ExperimentalLawrencium,103,Lr,Experimental,SOLID,,,TRUE,ExperimentalLawrencium,FALSE,,,,5,pickaxe,1,,FALSE
+Rutherfordium,ExperimentalRutherfordium,104,Rf,Experimental,SOLID,,,TRUE,ExperimentalRutherfordium,FALSE,,,,5,pickaxe,1,,FALSE
+Dubnium,ExperimentalDubnium,105,Db,Experimental,SOLID,,,FALSE,ExperimentalDubnium,FALSE,,,,5,pickaxe,1,,FALSE
+Seaborgium,ExperimentalSeaborgium,106,Sg,Experimental,SOLID,,,TRUE,ExperimentalSeaborgium,FALSE,,,,5,pickaxe,1,,FALSE
+Bohrium,ExperimentalBohrium,107,Bh,Experimental,SOLID,,,TRUE,ExperimentalBohrium,FALSE,,,,5,pickaxe,1,,FALSE
+Hassium,ExperimentalHassium,108,Hs,Experimental,SOLID,,,TRUE,ExperimentalHassium,FALSE,,,,5,pickaxe,1,,FALSE
+Meitnerium,ExperimentalMeitnerium,109,Mt,Experimental,SOLID,,,TRUE,ExperimentalMeitnerium,FALSE,,,,5,pickaxe,1,,FALSE
+Darmstadtium,ExperimentalDarmstadtium,110,Ds,Experimental,SOLID,,,TRUE,ExperimentalDarmstadtium,FALSE,,,,5,pickaxe,1,,FALSE
+Roentgenium,ExperimentalRoentgenium,111,Rg,Experimental,SOLID,,,TRUE,ExperimentalRoentgenium,FALSE,,,,5,pickaxe,1,,FALSE
+Copernicium,ExperimentalCopernicium,112,Cn,Experimental,SOLID,,,TRUE,ExperimentalCopernicium,FALSE,,,,5,pickaxe,1,,FALSE
+Ununtrium,ExperimentalUnuntrium,113,Uut,Experimental,SOLID,,,TRUE,ExperimentalUnuntrium,FALSE,,,,5,pickaxe,1,,FALSE
+Flerovium,ExperimentalFlerovium,114,Fl,Experimental,SOLID,,,TRUE,ExperimentalFlerovium,FALSE,,,,5,pickaxe,1,,FALSE
+Ununpentium,ExperimentalUnunpentium,115,Uup,Experimental,SOLID,,,TRUE,ExperimentalUnunpentium,FALSE,,,,5,pickaxe,1,,FALSE
+Livermorium,ExperimentalLivermorium,116,Lv,Experimental,SOLID,,,TRUE,ExperimentalLivermorium,FALSE,,,,5,pickaxe,1,,FALSE
+Ununseptium,ExperimentalUnunseptium,117,Uus,Experimental,SOLID,,,TRUE,ExperimentalUnunseptium,FALSE,,,,5,pickaxe,1,,FALSE
+Ununoctium,ExperimentalUnunoctium,118,Uuo,Experimental,SOLID,,,TRUE,ExperimentalUnunoctium,FALSE,,,,5,pickaxe,1,,FALSE

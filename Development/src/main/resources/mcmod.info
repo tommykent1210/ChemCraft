@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ChemCraft",
+  "name": "ChemCraft",
+  "description": "Adds all elements from the periodic table, and a whole plethora of crafting recipes!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tommykent1210"],
+  "credits": "Dorky106, Fairywhiz, Basspro262",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

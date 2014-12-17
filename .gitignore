@@ -1,0 +1,8 @@
+Builds/
+Planning/
+Development/bin/
+Development/build/
+Development/.gradle/
+Development/.settings/
+Development/eclipse/
+Icon
