@@ -19,7 +19,6 @@ public class RecipeManager {
 				GameRegistry.addSmelting(new ItemStack(ItemLoader.dustBoron, 1), new ItemStack(ItemLoader.ingotBoron, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(ItemLoader.dustCadmium, 1), new ItemStack(ItemLoader.ingotCadmium, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(ItemLoader.dustCaesium, 1), new ItemStack(ItemLoader.ingotCaesium, 1), 0.1F);
-				GameRegistry.addSmelting(new ItemStack(ItemLoader.dustCarbon, 1), new ItemStack(ItemLoader.ingotCarbon, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(ItemLoader.dustCerium, 1), new ItemStack(ItemLoader.ingotCerium, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(ItemLoader.dustChromium, 1), new ItemStack(ItemLoader.ingotChromium, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(ItemLoader.dustCobalt, 1), new ItemStack(ItemLoader.ingotCobalt, 1), 0.1F);
@@ -92,7 +91,6 @@ public class RecipeManager {
 				GameRegistry.addSmelting(new ItemStack(BlockLoader.oreBoron, 1), new ItemStack(ItemLoader.ingotBoron, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(BlockLoader.oreCadmium, 1), new ItemStack(ItemLoader.ingotCadmium, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(BlockLoader.oreCaesium, 1), new ItemStack(ItemLoader.ingotCaesium, 1), 0.1F);
-				GameRegistry.addSmelting(new ItemStack(BlockLoader.oreCarbon, 1), new ItemStack(ItemLoader.ingotCarbon, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(BlockLoader.oreCerium, 1), new ItemStack(ItemLoader.ingotCerium, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(BlockLoader.oreChromium, 1), new ItemStack(ItemLoader.ingotChromium, 1), 0.1F);
 				GameRegistry.addSmelting(new ItemStack(BlockLoader.oreCobalt, 1), new ItemStack(ItemLoader.ingotCobalt, 1), 0.1F);
@@ -199,7 +197,7 @@ public class RecipeManager {
 		    		});
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.dustCarbon, 2), new Object[]
 		{
-		    			new ItemStack(BlockLoader.oreCarbon, 1) 
+		    			new ItemStack(Items.coal, 1) 
 		    		});
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.dustCerium, 2), new Object[]
 		{
@@ -460,6 +458,302 @@ public class RecipeManager {
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.dustGold, 2), new Object[]
 		{
 		    			new ItemStack(Blocks.gold_ore, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateActinium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotActinium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateAluminium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotAluminium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateAntimony, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotAntimony, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateArsenic, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotArsenic, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateBarium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotBarium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateBeryllium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotBeryllium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateBismuth, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotBismuth, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateBoron, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotBoron, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateCadmium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotCadmium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateCaesium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotCaesium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateCerium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotCerium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateChromium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotChromium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateCobalt, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotCobalt, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateCopper, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotCopper, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateDysprosium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotDysprosium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateErbium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotErbium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateEuropium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotEuropium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateGadolinium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotGadolinium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateGallium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotGallium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateGermanium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotGermanium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateGold, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotGold, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateHafnium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotHafnium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateHolmium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotHolmium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateIndium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotIndium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateIodine, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotIodine, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateIridium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotIridium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateIron, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotIron, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateKrypton, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotKrypton, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateLanthanum, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotLanthanum, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateLead, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotLead, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateLithium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotLithium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateLutetium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotLutetium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateMagnesium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotMagnesium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateManganese, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotManganese, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateMercury, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotMercury, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateMolybdenum, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotMolybdenum, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateNeodymium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotNeodymium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateNickel, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotNickel, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateNiobium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotNiobium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateOsmium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotOsmium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.platePalladium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotPalladium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.platePhosphorus, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotPhosphorus, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.platePlatinum, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotPlatinum, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.platePolonium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotPolonium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.platePotassium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotPotassium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.platePraseodymium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotPraseodymium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateProtactinium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotProtactinium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateRadium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotRadium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateRhenium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotRhenium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateRhodium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotRhodium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateRubidium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotRubidium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateRuthenium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotRuthenium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateSamarium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotSamarium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateScandium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotScandium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateSelenium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotSelenium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateSilicon, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotSilicon, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateSilver, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotSilver, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateSodium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotSodium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateStrontium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotStrontium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateTantalum, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotTantalum, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateTellurium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotTellurium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateTerbium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotTerbium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateThallium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotThallium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateThorium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotThorium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateThulium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotThulium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateTin, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotTin, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateTitanium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotTitanium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateTungsten, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotTungsten, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateUranium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotUranium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateVanadium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotVanadium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateYtterbium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotYtterbium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateYttrium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotYttrium, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateZinc, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotZinc, 1) 
+		    		});
+				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateZirconium, 3), new Object[]
+		{
+		    			new ItemStack(ItemLoader.ingotZirconium, 1) 
 		    		});
 			}
 	

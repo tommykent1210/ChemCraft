@@ -13,6 +13,8 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.Random;
 import net.minecraft.util.AxisAlignedBB;
+import me.tomkent.chemcraft.ArmorLoader;
+import me.tomkent.chemcraft.Armor.ChemCraftHazmatArmor;
 
 public class oreThorium extends Block{
 
@@ -33,16 +35,36 @@ public class oreThorium extends Block{
 	// update the block on tick and if player is within range, make them
 	// poisoned
 	public void updateTick(World world, int x, int y, int z, Random rand) {
-		System.out.println("X:" + x + ", Y:" + y + ", Z:" + z);
+		int radiationResistanceMultiplier = 10;
+		//System.out.println("X:" + x + ", Y:" + y + ", Z:" + z);
 		List playerList = world.getEntitiesWithinAABB(EntityPlayer.class,
 				AxisAlignedBB.getBoundingBox(x - 10, y - 10, z - 10, x + 10, y + 10,
 						z + 10));
 		if (playerList.size() > 0) {
-			System.out.println("Player near uranium!");
-			System.out.println(playerList);
 			for (int i = 0; i < playerList.size(); i++) {
 				EntityPlayer p = (EntityPlayer)playerList.get(i);
-				p.addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
+				int resistance = 0;
+				for(int a = 0; a < 4; a++) {
+					if(p.inventory.armorInventory[a] != null) {
+						if(p.inventory.armorInventory[a].getItem() instanceof ChemCraftHazmatArmor) {
+							ChemCraftHazmatArmor c = (ChemCraftHazmatArmor)p.inventory.armorInventory[a].getItem();
+							resistance += c.getRadiationResistance();
+						}
+					}
+				}
+				
+				System.out.println(resistance);
+				if(resistance < 10) {
+					if (rand.nextInt(resistance * radiationResistanceMultiplier) == 0){
+						p.addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
+						System.out.println("Player Recieved Radiation Poisoning. Resistance: " + resistance);
+					} else {
+						System.out.println("Player Resisted Radiation Poisoning. Resistance: " + resistance);
+					}
+				} else if (resistance == 0) {
+					p.addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
+					System.out.println("Player Recieved Radiation Poisoning. Resistance: " + resistance);
+				}
 			}
 			//((EntityPlayer)entity).addPotionEffect(new PotionEffect(Potion.poison.id, 200, 10));
 		}

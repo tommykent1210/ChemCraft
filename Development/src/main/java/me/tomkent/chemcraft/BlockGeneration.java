@@ -33,7 +33,7 @@ public class BlockGeneration implements IWorldGenerator {
 	}
 
 	public void generateOverworld(World world, Random rand, int x, int z) {
-				generateOre(BlockLoader.oreActinium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
+				generateOre(BlockLoader.oreActinium, world, rand, x, z, 1, 10, 20, 0, 30, Blocks.stone);
 				generateOre(BlockLoader.oreAluminium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreAntimony, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreArsenic, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
@@ -75,11 +75,11 @@ public class BlockGeneration implements IWorldGenerator {
 				generateOre(BlockLoader.orePalladium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.orePhosphorus, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.orePlatinum, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
-				generateOre(BlockLoader.orePolonium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
+				generateOre(BlockLoader.orePolonium, world, rand, x, z, 1, 10, 20, 0, 30, Blocks.stone);
 				generateOre(BlockLoader.orePotassium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.orePraseodymium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
-				generateOre(BlockLoader.oreProtactinium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
-				generateOre(BlockLoader.oreRadium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
+				generateOre(BlockLoader.oreProtactinium, world, rand, x, z, 1, 10, 20, 0, 30, Blocks.stone);
+				generateOre(BlockLoader.oreRadium, world, rand, x, z, 1, 10, 20, 0, 30, Blocks.stone);
 				generateOre(BlockLoader.oreRhenium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreRhodium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreRubidium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
@@ -96,12 +96,12 @@ public class BlockGeneration implements IWorldGenerator {
 				generateOre(BlockLoader.oreTellurium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreTerbium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreThallium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
-				generateOre(BlockLoader.oreThorium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
+				generateOre(BlockLoader.oreThorium, world, rand, x, z, 1, 10, 20, 0, 30, Blocks.stone);
 				generateOre(BlockLoader.oreThulium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreTin, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreTitanium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreTungsten, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
-				generateOre(BlockLoader.oreUranium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
+				generateOre(BlockLoader.oreUranium, world, rand, x, z, 1, 10, 20, 0, 30, Blocks.stone);
 				generateOre(BlockLoader.oreVanadium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreYtterbium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);
 				generateOre(BlockLoader.oreYttrium, world, rand, x, z, 1, 10, 20, 0, 60, Blocks.stone);

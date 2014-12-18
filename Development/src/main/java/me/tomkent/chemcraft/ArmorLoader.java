@@ -1,7 +1,7 @@
 package me.tomkent.chemcraft;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import me.tomkent.chemcraft.Armor.ChemCraftArmor;
+import me.tomkent.chemcraft.Armor.ChemCraftHazmatArmor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -20,9 +20,9 @@ public class ArmorLoader {
 
 	//Initialise the ArmorLoader
 	public static void init() {
-		GameRegistry.registerItem(HazmatHelmet = new ChemCraftArmor("hazmat_helmet", Hazmat, "hazmat", 0), "hazmat_helmet"); //0 for helmet
-		GameRegistry.registerItem(HazmatChestplate = new ChemCraftArmor("hazmat_chestplate", Hazmat, "hazmat", 1), "hazmat_chestplate"); // 1 for chestplate
-		GameRegistry.registerItem(HazmatLeggings = new ChemCraftArmor("hazmat_leggings", Hazmat, "hazmat", 2), "hazmat_leggings"); // 2 for leggings
-		GameRegistry.registerItem(HazmatBoots = new ChemCraftArmor("hazmat_boots", Hazmat, "hazmat", 3), "hazmat_boots"); // 3 for boots
+		GameRegistry.registerItem(HazmatHelmet = new ChemCraftHazmatArmor("hazmat_helmet", Hazmat, "hazmat", 0, 1), "hazmat_helmet"); //0 for helmet
+		GameRegistry.registerItem(HazmatChestplate = new ChemCraftHazmatArmor("hazmat_chestplate", Hazmat, "hazmat", 1, 4), "hazmat_chestplate"); // 1 for chestplate
+		GameRegistry.registerItem(HazmatLeggings = new ChemCraftHazmatArmor("hazmat_leggings", Hazmat, "hazmat", 2, 3), "hazmat_leggings"); // 2 for leggings
+		GameRegistry.registerItem(HazmatBoots = new ChemCraftHazmatArmor("hazmat_boots", Hazmat, "hazmat", 3, 2), "hazmat_boots"); // 3 for boots
 	}
 }

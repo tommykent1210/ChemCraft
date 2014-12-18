@@ -64,7 +64,8 @@ class GenerateRecipes extends Jralph\LaravelArtisanColour\Console\Command {
         	$input = "";
         	if($element["SmeltingInput"]) { $input = $element["SmeltingInput"]."->"; }
         	$this->line("Found Recipe for: ".$input.$element["OutputItem"]." (".$currentElementCount."/".$elementCount.")",'yellow');
-        	if($element["Enabled"]) {
+        	//echo $element["Enabled"];
+            if($element["Enabled"] == "TRUE") {
         		$this->line("Recipe is enabled. Continuing.",'green');
 
 

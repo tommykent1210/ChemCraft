@@ -5,16 +5,22 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ChemCraftArmor extends ItemArmor{
+public class ChemCraftHazmatArmor extends ItemArmor{
 	public String textureName;
+	public int RadiationResistance;
 
-	public ChemCraftArmor(String unlocalizedName, ArmorMaterial material, String textureName, int type) {
+	public ChemCraftHazmatArmor(String unlocalizedName, ArmorMaterial material, String textureName, int type, int RadiationResistance) {
 	    super(material, 0, type);
 	    this.textureName = textureName;
 	    this.setUnlocalizedName(ChemCraft.MODID + "_" + unlocalizedName);
 	    this.setTextureName(ChemCraft.MODID + ":" + unlocalizedName);
 	    this.setCreativeTab(ChemCraft.tabChemcraftItems);
+	    this.RadiationResistance = RadiationResistance;
 	    
+	}
+	
+	public int getRadiationResistance() {
+		return RadiationResistance;
 	}
 	
 	@Override

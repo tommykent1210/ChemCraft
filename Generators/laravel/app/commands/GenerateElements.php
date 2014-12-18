@@ -40,7 +40,7 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 		//
 		$GenHelper = new GenHelper();
 		$key = '1erWA95MmGF30nQcCpx4h89Z5kxwmbjFv04JSM5nCsoU';
-		$radioactiveRange = 10;
+		$radioactiveRange = 5;
 
 
 		$this->line("--[ Building Elements: Started]--", 'yellow');
