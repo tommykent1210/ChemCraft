@@ -1,2 +1,6 @@
 itemGroup.ChemCraft_Blocks=ChemCraft Blocks
 itemGroup.ChemCraft_Items=ChemCraft Items
+item.ChemCraft_hazmat_helmet.name=Hazmat Helmet
+item.ChemCraft_hazmat_chestplate.name=Hazmat Chestplate
+item.ChemCraft_hazmat_leggings.name=Hazmat Leggings
+item.ChemCraft_hazmat_boots.name=Hazmat Boots

@@ -43,6 +43,7 @@ class GenerateBuild extends Jralph\LaravelArtisanColour\Console\Command {
 		$this->call('chemcraft:elements');
 		$this->call('chemcraft:items');
 		$this->call('chemcraft:recipes');
+		$this->call('chemcraft:assets');
 
 		//combine language files
 		$this->line("--[Language Strings: Starting]--", 'yellow');

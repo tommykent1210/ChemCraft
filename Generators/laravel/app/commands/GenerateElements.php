@@ -79,14 +79,14 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	        		if ($element["Texture"]) { $textureFile = $element["Texture"]; }
 
 	        		//Does the texture even exist?
-	        		if (file_exists(Config::get('gen.spritesDir').$textureFile.".png")) {
+	        		if (file_exists(Config::get('gen.spritesDir')."Blocks/".$textureFile.".png")) {
 	        			$texture = $textureFile;
 	        			//copy the file to the project directory
 
 	        			//echo Config::get('gen.spritesDir').$textureFile.".png"; 
 	        			//echo Config::get('gen.projectTextureDir')."blocks/".$textureFile.".png";
 
-	        			copy(Config::get('gen.spritesDir').$textureFile.".png", Config::get('gen.projectTextureDir')."blocks/".$textureFile.".png");
+	        			copy(Config::get('gen.spritesDir')."Blocks/".$textureFile.".png", Config::get('gen.projectTextureDir')."blocks/".$textureFile.".png");
 	        			$this->line("Copying: ".$texture.".png to textures folder...", 'magenta');
 	        		} else {
 	        			//Nope! So set it as the "missing.png" image

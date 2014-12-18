@@ -28,8 +28,12 @@ public class ChemCraft
     public void preinit(FMLPreInitializationEvent event)
     {
     	BlockLoader.initBlocks();
+    	ArmorLoader.init();
+    	
+    	//finally load items and recipes
     	ItemLoader.initItems();
     	RecipeManager.initRecipes();
+    	
     	GameRegistry.registerWorldGenerator(new BlockGeneration(), 0);
     }
     

@@ -1,4 +1,4 @@
-package me.tomkent.chemcraft.items;
+package me.tomkent.chemcraft.Items;
 
 import me.tomkent.chemcraft.ChemCraft;
 import net.minecraft.creativetab.CreativeTabs;

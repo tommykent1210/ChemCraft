@@ -15,3 +15,4 @@ Artisan::add(new GenerateElements);
 Artisan::add(new GenerateItems);
 Artisan::add(new GenerateBuild);
 Artisan::add(new GenerateRecipes);
+Artisan::add(new CopyAssets);

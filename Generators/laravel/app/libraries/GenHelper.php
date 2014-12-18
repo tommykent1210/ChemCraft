@@ -382,4 +382,22 @@ class GenHelper {
 		}
 	}
 
+	function recursiveCopy($source, $dest) {
+		$num = 0;
+		//mkdir($dest, 0755);
+		foreach (
+		 $iterator = new \RecursiveIteratorIterator(
+		  new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS),
+		  \RecursiveIteratorIterator::SELF_FIRST) as $item
+		) {
+		  if ($item->isDir()) {
+		    mkdir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+		  } else {
+		  	$num += 1;
+		    copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+		  }
+		}
+		return $num;
+	}
+
 }

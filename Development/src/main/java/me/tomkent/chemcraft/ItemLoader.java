@@ -2,7 +2,7 @@ package me.tomkent.chemcraft;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
-import me.tomkent.chemcraft.items.*;
+import me.tomkent.chemcraft.Items.*;
 
 public class ItemLoader {
 		public static Item dustActinium;
