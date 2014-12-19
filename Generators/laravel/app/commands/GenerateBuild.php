@@ -45,14 +45,16 @@ class GenerateBuild extends Jralph\LaravelArtisanColour\Console\Command {
 		$this->call('chemcraft:recipes');
 		$this->call('chemcraft:assets');
 
+		//get the build number
+		$build = $GenHelper->getNewBuildNumber();
+		$GenHelper->updateBuildInConfig($build);
+		$GenHelper->updateBuildInGame($build);
+
 		//combine language files
 		$this->line("--[Language Strings: Starting]--", 'yellow');
 		$GenHelper->combineLang(Config::get('gen.langDir'), Config::get('gen.langProjectDir')."en_US.lang");
 		$this->line("--[Language Strings: Complete]--", 'yellow');
 
-		//get the build number
-		$build = $GenHelper->getNewBuildNumber();
-		$GenHelper->updateBuildInConfig($build);
 
 		//Call "Build"
 		$dir =str_replace(" ", "\ ", Config::get('gen.projectGradleDir'));

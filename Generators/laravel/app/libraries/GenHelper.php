@@ -113,6 +113,13 @@ class GenHelper {
 		));
 	}
 
+	function updateBuildInGame($buildNum) {
+		$this->buildNumber = $buildNum;
+		$buildfile = Config::get('gen.langDir')."build_en_US.lang";
+		$str = "ChemCraft_buildnum=".$buildNum;
+		file_put_contents($buildfile, $str.PHP_EOL);
+	}
+
 	function tintImage($image, $newimage, $hex, $alpha) {
 
 		//echo $imageFile;
