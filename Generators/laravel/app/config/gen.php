@@ -2,15 +2,14 @@
 
 return array(
 
-	'dir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Generators/Assets/",
-	'langProjectDir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Development/src/main/resources/assets/chemcraft/lang/",
-	'langDir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Language/",
-	'spritesDir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Sprites/",
-	'spritesDirItems' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Sprites/Items/",
-	'codeDir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Development/src/main/java/me/tomkent/chemcraft/",
-	'projectTextureDir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Development/src/main/java/assets/chemcraft/textures/",
-	'projectAssetDir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Development/src/main/java/assets/chemcraft/",
-	'projectGradleDir' => "/Users/Tom/Google Drive/Minecraft Modding/ChemCraft/Development/",
+	'langProjectDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."main".DIRECTORY_SEPARATOR."resources".DIRECTORY_SEPARATOR."assets".DIRECTORY_SEPARATOR."chemcraft".DIRECTORY_SEPARATOR."lang".DIRECTORY_SEPARATOR,
+	'langDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Language".DIRECTORY_SEPARATOR,
+	'spritesDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Sprites".DIRECTORY_SEPARATOR,
+	'spritesDirItems' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Sprites".DIRECTORY_SEPARATOR."items".DIRECTORY_SEPARATOR,
+	'codeDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."main".DIRECTORY_SEPARATOR."java".DIRECTORY_SEPARATOR."me".DIRECTORY_SEPARATOR."tomkent".DIRECTORY_SEPARATOR."chemcraft".DIRECTORY_SEPARATOR,
+	'projectTextureDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."main".DIRECTORY_SEPARATOR."java".DIRECTORY_SEPARATOR."assets".DIRECTORY_SEPARATOR."chemcraft".DIRECTORY_SEPARATOR."textures".DIRECTORY_SEPARATOR,
+	'projectAssetDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."main".DIRECTORY_SEPARATOR."java".DIRECTORY_SEPARATOR."assets".DIRECTORY_SEPARATOR."chemcraft".DIRECTORY_SEPARATOR,
+	'projectGradleDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR,
 
 	'spreadsheetElements' => 'https://docs.google.com/spreadsheets/d/1erWA95MmGF30nQcCpx4h89Z5kxwmbjFv04JSM5nCsoU/export?gid=0&single=true&output=csv',
 	'spreadsheetKey' => '1erWA95MmGF30nQcCpx4h89Z5kxwmbjFv04JSM5nCsoU',

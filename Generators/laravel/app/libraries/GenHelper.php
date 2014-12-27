@@ -400,8 +400,10 @@ class GenHelper {
 		  if ($item->isDir()) {
 		    mkdir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
 		  } else {
-		  	$num += 1;
-		    copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+		  	if($iterator->getSubPathName() != "desktop.ini") {
+			  	$num += 1;
+			    copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+			}
 		  }
 		}
 		return $num;

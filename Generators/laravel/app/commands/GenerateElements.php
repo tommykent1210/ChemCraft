@@ -95,7 +95,14 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	        		}
 
 	        		//add the block to the blocklist
-	        		array_push($blocks, $element["ID"]);
+	        		array_push($blocks, array("OreID" => $element["ID"],
+	        			"OreName" => $element["OreName"],
+	        			"OreTexture" => $texture,
+	        			"ToolClass" => $element["ToolClass"],
+	        			"ToolTier" => $element["ToolTier"],
+	        			"Hardness" => $element["Hardness"],
+	        			"Radioactive" => $element["Radioactive"],
+	        			));
 
 	        		//create the language string for this element
 	        		$langitem = "tile.ChemCraft_".$element["ID"].".name=".$element["OreName"];
@@ -108,7 +115,7 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	
 	        		}
 
-	        		//output the java file for the block
+	        		/*//output the java file for the block
 	        		$content = View::make('templates.block')->with(array(
 	        			"OreID" => $element["ID"],
 	        			"OreName" => $element["OreName"],
@@ -134,8 +141,11 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	        		//save the block class out for this block
 	        		file_put_contents(Config::get('gen.codeDir')."Blocks/".$element['ID'].".java", $content);
 
+					
 	        		//Tell them we're done
 	        		$this->info("Written Element: ".$element["Name"].".java (Type: '".$element["Type"].$element["GenerateOre"]."')");
+        		
+					*/
         		} else {
         			$this->line("Skipping: ".$element["Name"].". (Reason: 'Wrong Type')",'red');
         			$this->info("");

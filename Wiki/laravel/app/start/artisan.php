@@ -11,3 +11,12 @@
 |
 */
 
+
+Artisan::add(new GenerateItems);
+Artisan::add(new GenerateBlocks);
+Artisan::add(new GenerateRecipes);
+Artisan::add(new GenerateVanilla);
+Artisan::add(new GenerateWikiItems);
+Artisan::add(new NewDownload);
+Artisan::add(new NewVersion);
+Artisan::add(new Refresh);

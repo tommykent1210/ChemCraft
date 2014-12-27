@@ -565,7 +565,7 @@ public class RecipeManager {
 		    		});
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateIron, 3), new Object[]
 		{
-		    			new ItemStack(ItemLoader.ingotIron, 1) 
+		    			new ItemStack(Items.iron_ingot, 1) 
 		    		});
 				GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.plateKrypton, 3), new Object[]
 		{

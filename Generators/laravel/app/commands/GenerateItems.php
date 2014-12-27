@@ -112,7 +112,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 	        	}
         	
         		//generate the item class
-        		$content = View::make('templates.item')->with(array(
+        		/*$content = View::make('templates.item')->with(array(
 	        			"id" => $element["ID"],
 	        			"name" => $element["Name"],
 	        			"texture" => $texture
@@ -123,9 +123,10 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         		$this->line("Saving Class for ".$element["ID"]. " to ".$element["ID"].".java",'yellow');
 
         		file_put_contents(Config::get('gen.codeDir')."items/".$element['ID'].".java", $content);
+				*/
 
 	        	//add the item to the laoder
-	        	array_push($items, $element["ID"]);
+	        	array_push($items, array('id' => $element["ID"], 'name' => $element["Name"], 'texture' => $texture, 'stacksize' => $element["MaxStack"]));
 
         		
         		//create the language string for this item

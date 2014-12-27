@@ -48,14 +48,14 @@ class CopyAssets extends Jralph\LaravelArtisanColour\Console\Command {
         
         //copy armor
         $this->line("Moving Armor Textures", 'yellow');
-        $n = $GenHelper->recursiveCopy(Config::get('gen.spritesDir')."Armor/",Config::get('gen.projectAssetDir')."armor/");
+        $n = $GenHelper->recursiveCopy(Config::get('gen.spritesDir')."Armor".DIRECTORY_SEPARATOR,Config::get('gen.projectAssetDir')."armor".DIRECTORY_SEPARATOR);
         $elementCount += $n;
         $this->line("Moved ".$n." items.", 'green');
 		$this->line("");
 
         //copy armoritems
         $this->line("Moving Armor Textures", 'yellow');
-        $n = $GenHelper->recursiveCopy(Config::get('gen.spritesDir')."ArmorItems/",Config::get('gen.projectTextureDir')."items/");
+        $n = $GenHelper->recursiveCopy(Config::get('gen.spritesDir')."ArmorItems".DIRECTORY_SEPARATOR,Config::get('gen.projectTextureDir')."items".DIRECTORY_SEPARATOR);
         $elementCount += $n;
         $this->line("Moved ".$n." items.", 'green');
 		$this->line("");        

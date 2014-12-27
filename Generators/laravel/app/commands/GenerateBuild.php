@@ -40,10 +40,14 @@ class GenerateBuild extends Jralph\LaravelArtisanColour\Console\Command {
 		$GenHelper = new GenHelper();
 
 		// Call Generators
-		$this->call('chemcraft:elements');
-		$this->call('chemcraft:items');
-		$this->call('chemcraft:recipes');
-		$this->call('chemcraft:assets');
+		if($this->option('skipgen') == "FALSE") {
+			$this->call('chemcraft:elements');
+			$this->call('chemcraft:items');
+			$this->call('chemcraft:recipes');
+			$this->call('chemcraft:assets');
+		}
+
+		//echo $this->option('skipgen');
 
 		//get the build number
 		$build = $GenHelper->getNewBuildNumber();
@@ -57,13 +61,42 @@ class GenerateBuild extends Jralph\LaravelArtisanColour\Console\Command {
 
 
 		//Call "Build"
-		$dir =str_replace(" ", "\ ", Config::get('gen.projectGradleDir'));
-		$cmd = 'build.sh';
+		$dir =Config::get('gen.projectGradleDir');
+		
 		$this->line("--[Building Jar: Starting]--", 'yellow');
 		$this->line("Build Number: ".$build, 'yellow');
 
+		
+		$envir = 'OSX';
+		//var_dump($_SERVER);
+		if(isset($_SERVER['OS'])) {
+			if(substr($_SERVER['OS'], 0, 7) == "Windows") {
+				$envir = 'Windows';
+			}
+		}
 
-		$output = shell_exec($dir.$cmd);
+
+
+		$this->line("Detected Environment: ".$envir, 'cyan');
+
+		if($envir == 'OSX') {
+			$cmd = 'build.sh';
+			$finalCommand = '"'.$dir.$cmd.'"';
+			$output = shell_exec($finalCommand);
+		} else {
+			//probably windows?
+			$cmd = 'build.bat';
+			$finalCommand = '"'.$dir.$cmd.'"';
+			$this->line($finalCommand, 'yellow');
+			
+			//$commandForExec = 'cmd /c "'.$finalCommand.'" -p "'.$dir.'" build';
+			//echo $commandForExec;
+			//$output = system("cmd /c ".$finalCommand);
+			$output = system($finalCommand);
+			
+		}
+			
+		
 		$this->line($output, 'cyan');
 		$this->line("--[Building Jar: Complete]--", 'yellow');
 
@@ -89,7 +122,7 @@ class GenerateBuild extends Jralph\LaravelArtisanColour\Console\Command {
 	protected function getOptions()
 	{
 		return array(
-			
+			array('skipgen', 'sg', InputOption::VALUE_OPTIONAL, 'Skip the generation of files, just build!', 'FALSE')
 		);
 	}
 

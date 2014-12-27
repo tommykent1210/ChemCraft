@@ -10,15 +10,19 @@ import net.minecraftforge.oredict.OreDictionary;
 public class BlockLoader {
 
 	@foreach($blocks as $b)
-	public static Block {{$b}};
+	public static Block {{$b['OreID']}};
 	@endforeach
 
 	public static void initBlocks() {
 
 		@foreach($blocks as $b)
-		{{$b}} = new {{$b}}();
-		//OreDictionary.registerOre("{{$b}}", new ItemStack({{$b}}, 1, 0));
-    	GameRegistry.registerBlock({{$b}}, "{{$b}}");
+		@if ($b['Radioactive'] == 'TRUE')
+		{{$b['OreID']}} = new GenericBlockRadioactive("{{$b['OreName']}}", "{{$b['OreTexture']}}", "{{$b['OreID']}}", "{{$b['ToolClass']}}", {{$b['ToolTier']}}, {{$b['Hardness']}}F);
+		@else
+		{{$b['OreID']}} = new GenericBlock("{{$b['OreName']}}", "{{$b['OreTexture']}}", "{{$b['OreID']}}", "{{$b['ToolClass']}}", {{$b['ToolTier']}}, {{$b['Hardness']}}F);
+		@endif
+		//OreDictionary.registerOre("{{$b['OreName']}}", new ItemStack({{$b['OreID']}}, 1, 0));
+    	GameRegistry.registerBlock({{$b['OreID']}}, "{{$b['OreName']}}");
     	
 		@endforeach
 		

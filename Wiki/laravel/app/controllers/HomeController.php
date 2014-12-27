@@ -1,23 +1,20 @@
-<?php
+<?php 
 
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
+    /**
+     * Initializer.
+     *
+     * @return \HomeController
+     */
 
-	public function showWelcome()
-	{
-		return View::make('hello');
-	}
+    public function getIndex() {
+        
+        //$twitter = Twitter::getUserTimeline(array('screen_name' => 'chemcraftmc', 'count' => 8, 'format' => 'object'));
+
+        //echo App::environment();
+    	//return View::make('site.home')->with(array('twitter' => $twitter));
+    	return View::make('site.home');
+    }
 
 }
