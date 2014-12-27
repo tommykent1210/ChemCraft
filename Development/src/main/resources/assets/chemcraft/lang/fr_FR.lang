@@ -187,7 +187,6 @@ tile.ChemCraft_oreYtterbium.name=Minerai de +element.Yb
 tile.ChemCraft_oreYttrium.name=Minerai de +element.Y
 tile.ChemCraft_oreZinc.name=Minerai de +element.Zn
 tile.ChemCraft_oreZirconium.name=Minerai de +element.Zr
-ChemCraft_buildnum=102
 itemGroup.ChemCraft_Blocks=Blocs ChemCraft
 itemGroup.ChemCraft_Items=Eléments ChemCraft
 item.ChemCraft_hazmat_helmet.name=Casque Hazmat
