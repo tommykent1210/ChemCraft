@@ -103,15 +103,6 @@ class GenHelper {
 		return $newBuild;
 	}
 
-	function updateBuildInConfig($buildNum) {
-		$this->buildNumber = $buildNum;
-		$gradle = Config::get('gen.projectGradleDir')."gradle.properties";
-		file_put_contents($gradle, implode('', 
-		 array_map(function($data) {
-		    return stristr($data,'buildnumber=') ? "buildnumber=".$this->buildNumber : $data;
-		  }, file($gradle))
-		));
-	}
 
 	function updateBuildInGame($buildNum) {
 		$this->buildNumber = $buildNum;

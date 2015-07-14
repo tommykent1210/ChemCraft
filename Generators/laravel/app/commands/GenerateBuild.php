@@ -79,7 +79,7 @@ class GenerateBuild extends Jralph\LaravelArtisanColour\Console\Command {
 
 		$this->line("Detected Environment: ".$envir, 'cyan');
 
-		if($envir == 'OSX') {
+		if($envir != 'Windows') {
 			$cmd = 'build.sh';
 			$finalCommand = '"'.$dir.$cmd.'"';
 			$output = shell_exec($finalCommand);
