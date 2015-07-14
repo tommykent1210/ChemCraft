@@ -233,6 +233,7 @@ public class ItemLoader {
 		public static Item plateYttrium;
 		public static Item plateZinc;
 		public static Item plateZirconium;
+		public static Item plateMachine;
 		
 	
 	public static void initItems() {
@@ -692,5 +693,7 @@ public class ItemLoader {
 		GameRegistry.registerItem(plateZinc, "Zinc plate");
 				plateZirconium = new GenericItem("plateZirconium","plateZirconium","Zirconium plate", 64);
 		GameRegistry.registerItem(plateZirconium, "Zirconium plate");
+				plateMachine = new GenericItem("plateMachine","missing","Machine plate", 64);
+		GameRegistry.registerItem(plateMachine, "Machine plate");
 			}
 }
