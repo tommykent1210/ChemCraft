@@ -102,7 +102,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 	        			$texture = $textureFile;
 	        			//copy the file to the project directory
 
-	        			copy(Config::get('gen.spritesDirItems').$textureFile.".png", Config::get('gen.projectTextureDir')."items/".$textureFile.".png");
+	        			copy(Config::get('gen.spritesDirItems').$textureFile.".png", Config::get('gen.projectTextureDir')."Items/".$textureFile.".png");
 	        			$this->line("Copying: ".$texture.".png to textures folder...", 'magenta');
 	        		} else {
 	        			//Nope! So set it as the "missing.png" image
