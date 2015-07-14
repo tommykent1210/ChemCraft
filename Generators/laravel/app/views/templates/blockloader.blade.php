@@ -3,7 +3,6 @@ package me.tomkent.chemcraft;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
-import me.tomkent.chemcraft.Blocks.*;
 import net.minecraftforge.oredict.OreDictionary;
 
 
