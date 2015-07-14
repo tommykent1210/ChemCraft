@@ -2,9 +2,10 @@ ChemCraft - Minecraft Mod
 =========
 
 **Version Information**
-* Minecraft Version:  1.7.10
-* Mod Version:        1.0.1 [(Latest)](#Latest)
-* Forge Version:      10.13.2.1230
+* Minecraft Version:  	1.7.10
+* Mod Version:        	1.0.1 [(Latest)](#Latest)
+* Forge Version:      	10.13.2.1230
+* Current Build Status: [![Build Status](http://jenkins.chemcraft.info/job/ChemCraft/badge/icon)](http://jenkins.chemcraft.info/job/ChemCraft)
 
 
 ### What is ChemCraft?
