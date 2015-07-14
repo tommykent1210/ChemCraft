@@ -1,0 +1,20 @@
+{
+    "name": "jralph/laravel-artisan-colour",
+    "description": "",
+    "authors": [
+        {
+            "name": "Joseph Ralph",
+            "email": "joe@josephralph.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jralph\\LaravelArtisanColour": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
