@@ -75,7 +75,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         		if ($element["SpriteType"] == "Tint") { 
 
         			$baseTexture = Config::get('gen.spritesDirItems').$textureFile.".png";
-        			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
+        			$copyLocation = Config::get('gen.projectTextureDir')."Items/".$element["ID"].".png";
         			$tinthex = $element["TintColour"];
         			$tintalpha = $element["TintAlpha"];
         			$this->line("Tinting: ".$textureFile.".png with: #".$tinthex."(".$tintalpha.")", 'magenta');
@@ -83,14 +83,14 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         			$texture = $element["ID"];
         		} elseif ($element["SpriteType"] == "Hue") {
         			$baseTexture = Config::get('gen.spritesDirItems').$textureFile.".png";
-        			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
+        			$copyLocation = Config::get('gen.projectTextureDir')."Items/".$element["ID"].".png";
         			$hueAmount = intval($element["HueAmount"]);
         			$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees", 'magenta');
         			$GenHelper->hueImage($baseTexture, $copyLocation, $hueAmount);
         			$texture = $element["ID"];
         		} elseif ($element["SpriteType"] == "HueDesat") {
         			$baseTexture = Config::get('gen.spritesDirItems').$textureFile.".png";
-        			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
+        			$copyLocation = Config::get('gen.projectTextureDir')."Items/".$element["ID"].".png";
         			$hueAmount = intval($element["HueAmount"]);
         			$desatAmount = intval($element["DesaturationAmount"]);
         			$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees then desaturating by ".$desatAmount."%", 'magenta');
