@@ -5,8 +5,12 @@ Development/build/
 Development/.gradle/
 Development/.settings/
 Development/eclipse/
-Wiki/
-Wiki/laravel/
-Generators/.idea/
+Development/src/main/java/me/tomkent/chemcraft/BlockLoader.java
+Development/src/main/java/me/tomkent/chemcraft/ItemLoader.java
+Development/src/main/java/me/tomkent/chemcraft/RecipeManager.java
+Development/src/main/resources/assets/chemcraft/lang/en_US.lang
+Language/
 Icon
 desktop.ini
+Wiki/
+Generators/.idea/
