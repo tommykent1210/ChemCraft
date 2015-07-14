@@ -3,7 +3,7 @@ ChemCraft - Minecraft Mod
 
 **Version Information**
 * Minecraft Version:  1.7.10
-* Mod Version:        1.0 [(Latest)](#Latest)
+* Mod Version:        1.0.1 [(Latest)](#Latest)
 * Forge Version:      10.13.2.1230
 
 
