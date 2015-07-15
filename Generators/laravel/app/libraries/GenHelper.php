@@ -413,10 +413,12 @@ class GenHelper {
 			break;
 
 			case "local":
+			$this->line("Looking for local file: ".Config::get('gen.spritesDirItems').$name.".png",'green');
 				$textureFile = Config::get('gen.spritesDirItems').$name.".png";
 			break;
 
 			case "url":
+				$this->line("Contacting URL: ".$this->option('url')."assets/Items/".$name.".png",'green');
 				$textureFile = $this->option('url')."assets/Items/".$name.".png";
 			break;
 
@@ -445,10 +447,13 @@ class GenHelper {
 			break;
 
 			case "local":
+
+				$this->line("Looking for local file: ".Config::get('gen.spritesDirBlocks').$name.".png",'green');
 				$textureFile = Config::get('gen.spritesDirBlocks').$name.".png";
 			break;
 
 			case "url":
+				$this->line("Contacting URL: ".$this->option('url')."assets/Blocks/".$name.".png",'green');
 				$textureFile = $this->option('url')."assets/Blocks/".$name.".png";
 			break;
 
