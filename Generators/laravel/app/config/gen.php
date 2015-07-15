@@ -6,6 +6,7 @@ return array(
 	'langDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Language".DIRECTORY_SEPARATOR,
 	'spritesDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Sprites".DIRECTORY_SEPARATOR,
 	'spritesDirItems' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Sprites".DIRECTORY_SEPARATOR."Items".DIRECTORY_SEPARATOR,
+	'spritesDirBlocks' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Sprites".DIRECTORY_SEPARATOR."Blocks".DIRECTORY_SEPARATOR,
 	'codeDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."main".DIRECTORY_SEPARATOR."java".DIRECTORY_SEPARATOR."me".DIRECTORY_SEPARATOR."tomkent".DIRECTORY_SEPARATOR."chemcraft".DIRECTORY_SEPARATOR,
 	'projectTextureDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."main".DIRECTORY_SEPARATOR."java".DIRECTORY_SEPARATOR."assets".DIRECTORY_SEPARATOR."chemcraft".DIRECTORY_SEPARATOR."textures".DIRECTORY_SEPARATOR,
 	'projectAssetDir' => dirname(dirname(dirname(app_path()))).DIRECTORY_SEPARATOR."Development".DIRECTORY_SEPARATOR."src".DIRECTORY_SEPARATOR."main".DIRECTORY_SEPARATOR."java".DIRECTORY_SEPARATOR."assets".DIRECTORY_SEPARATOR."chemcraft".DIRECTORY_SEPARATOR,
