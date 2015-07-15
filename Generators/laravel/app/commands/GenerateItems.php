@@ -54,6 +54,9 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
     	//Get the Image Source option
     	$imagesource = $this->option('imagesource');
 
+    	//Output the image Source
+    	$this->line("Image Source: ".$imagesource, 'cyan');
+
     	//Setup empty Arrays
         $items = array();
         $langArray = array();
@@ -101,7 +104,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 	        			$this->line("Tinting: ".$textureFile.".png with: #".$tinthex."(".$tintalpha.")", 'magenta');
 
 	        			//Actually do the tint!
-	        			$GenHelper->tintImage($baseTexture, $copyLocation, $tinthex, $tintalpha);
+	        			$GenHelper->tintImage($baseTexture, $textureOutput, $tinthex, $tintalpha);
         				break;
         			case 'hue':
 
@@ -112,7 +115,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         				$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees", 'magenta');
 
         				//Actually hue the image!
-        				$GenHelper->hueImage($baseTexture, $copyLocation, $hueAmount);
+        				$GenHelper->hueImage($baseTexture, $textureOutput, $hueAmount);
         			
         				break;
 
@@ -128,7 +131,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         				$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees then desaturating by ".$desatAmount."%", 'magenta');
         			
         				//Hue and desaturate the image
-        				$GenHelper->hueImageDesat($baseTexture, $copyLocation, $hueAmount,$desatAmount);
+        				$GenHelper->hueImageDesat($baseTexture, $textureOutput, $hueAmount,$desatAmount);
 
         				break;
         			default:
@@ -137,11 +140,19 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         				$this->line("Copying: ".$texture.".png to textures folder...", 'magenta');
 
         				//Copy the sprite straight over
-        				copy($this->getImage($textureFile, $imagesource), Config::get('gen.projectTextureDir')."Items/".$textureFile.".png");
+        				copy($this->getImage($textureFile, $imagesource), $textureOutput);
 	        			
         				break;
         		}
-        		
+
+        		//set the texture for the item class
+        		if($baseTexture == Config::get('gen.spritesDirItems')."missing.png") {
+        			//if the texture couldn't be found, then set it to missing
+        			$texture = 'missing';
+        		} else {
+        			//if not, set it to the element ID
+        			$texture = $element['ID'];
+        		}
         		
 	        	//Add the item to the loader
 	        	array_push($items, array('id' => $element["ID"], 'name' => $element["Name"], 'texture' => $texture, 'stacksize' => $element["MaxStack"]));
