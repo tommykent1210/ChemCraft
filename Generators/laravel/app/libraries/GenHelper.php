@@ -400,7 +400,7 @@ class GenHelper {
 		return $num;
 	}
 
-	public function getImage($name, $source) {
+	public function getItemImage($name, $source) {
 
 		$textureFile = "";
 
@@ -428,6 +428,38 @@ class GenHelper {
 			return $textureFile;
 		} else {
 			return Config::get('gen.spritesDirItems')."missing.png";
+		}
+		
+	}
+
+	public function getBlockImage($name, $source) {
+
+		$textureFile = "";
+
+		switch ($source) {
+			case "cdn":
+				$this->line("Contacting CDN for: assets/Block/".$name.".png",'green');
+				
+				$textureFile = Config::get('gen.cdnURL')."Block/".$name.".png";
+				
+			break;
+
+			case "local":
+				$textureFile = Config::get('gen.spritesDirBlocks').$name.".png";
+			break;
+
+			case "url":
+				$textureFile = $this->option('url')."assets/Blocks/".$name.".png";
+			break;
+
+
+		}
+
+		//Check the item actually exists!
+		if ($this->checkImageExists($name, $source)) {
+			return $textureFile;
+		} else {
+			return Config::get('gen.spritesDirBlocks')."missing.png";
 		}
 		
 	}
