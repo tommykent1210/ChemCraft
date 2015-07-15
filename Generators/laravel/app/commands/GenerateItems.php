@@ -37,101 +37,120 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 	 */
 	public function fire()
 	{
-		//
+		//Instantiate GenHelper
 		$GenHelper = new GenHelper();
+
+		//Set the Google Drive access key
 		$key = '1QTH9lcbZhGYVjq76S10LiFmDNtqj0YaTU3NVdeO-_Lc';
 
-
+		//Verbosity
 		$this->line("--[ Building Items: Started]--", 'yellow');
 		$this->line("Getting spreadsheet from google...", 'yellow');
 		$this->line("");
 
+		//Get the array of Items from Google Drive
     	$arr = $GenHelper->google_spreadsheet_to_array($key);
 
+    	//Get the Image Source option
+    	$imagesource = $this->option('imagesource');
+
+    	//Setup empty Arrays
         $items = array();
         $langArray = array();
         
+        //Get the element counts
         $elementCount = count($arr);
         $currentElementCount = 0;
-        //var_dump($arr);
+        
+        //Loop through the items
         foreach ($arr as $element) {
+        	//Increment the item count
         	$currentElementCount += 1;
-        	//var_dump($element);
-        	//exit;
-        	# code...
+        	
+        	//Tell the user what we're doing
         	$this->line("Found Item: ".$element["ID"]. "(".$currentElementCount."/".$elementCount.")",'yellow');
+        	
+        	//Check if the item is enabled
         	if($element["Enabled"]) {
+
+        		//Tell the user it is
         		$this->line("Item (".$element["ID"]. ") is enabled. Continuing",'green');
 
-        		//add the item to the loader
-
-
-        		//do image stuff
-        		$texture = "";
-        		$imagesource = $this->option('imagesource');
+        		//Start image stuff
         		//Set the default texture (the block name)
         		$textureFile = $element["BaseSprite"];
 
-        		//Does it have a custom texture set?
-        		if ($element["SpriteType"] == "Tint") { 
+        		//Get the image from CDN/Local
+        		$baseTexture = $GenHelper->getImage($textureFile, $imagesource);
 
-        			$baseTexture = $this->getImage($textureFile, $imagesource);
-        			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
-        			$tinthex = $element["TintColour"];
-        			$tintalpha = $element["TintAlpha"];
-        			$this->line("Tinting: ".$textureFile.".png with: #".$tinthex."(".$tintalpha.")", 'magenta');
-        			$GenHelper->tintImage($baseTexture, $copyLocation, $tinthex, $tintalpha);
-        			$texture = $element["ID"];
-        		} elseif ($element["SpriteType"] == "Hue") {
-        			$baseTexture = $this->getImage($textureFile, $imagesource);
-        			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
-        			$hueAmount = intval($element["HueAmount"]);
-        			$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees", 'magenta');
-        			$GenHelper->hueImage($baseTexture, $copyLocation, $hueAmount);
-        			$texture = $element["ID"];
-        		} elseif ($element["SpriteType"] == "HueDesat") {
-        			$baseTexture = $this->getImage($textureFile, $imagesource);
-        			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
-        			$hueAmount = intval($element["HueAmount"]);
-        			$desatAmount = intval($element["DesaturationAmount"]);
-        			$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees then desaturating by ".$desatAmount."%", 'magenta');
-        			$GenHelper->hueImageDesat($baseTexture, $copyLocation, $hueAmount,$desatAmount);
-        			$texture = $element["ID"];
-        		} else {	
-        		//Does the texture even exist?
-	        		if (file_exists(Config::get('gen.spritesDirItems').$textureFile.".png")) {
-	        			$texture = $textureFile;
-	        			//copy the file to the project directory
+        		//Set the output folder
+        		$textureOutput = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
 
-	        			copy(Config::get('gen.spritesDirItems').$textureFile.".png", Config::get('gen.projectTextureDir')."Items/".$textureFile.".png");
-	        			$this->line("Copying: ".$texture.".png to textures folder...", 'magenta');
-	        		} else {
-	        			//Nope! So set it as the "missing.png" image
-	        			$texture = "missing";
-	        			$this->line("Cannot copy: ".$textureFile.".png to textures folder (Reason: 'missing'). Using missing.png", 'red');
-	        		}
-	        	}
-        	
-        		//generate the item class
-        		/*$content = View::make('templates.item')->with(array(
-	        			"id" => $element["ID"],
-	        			"name" => $element["Name"],
-	        			"texture" => $texture
+        		//Does it have a custom texture function set?
+
+        		switch (strtolower($element["SpriteType"])) {
+        			case 'tint':
+
+        				//Get the tint hex
+        				$tinthex = $element["TintColour"];
+
+        				//Get the tint alpha
+	        			$tintalpha = $element["TintAlpha"];
+
+	        			//Tell the user (for logging purposes)
+	        			$this->line("Tinting: ".$textureFile.".png with: #".$tinthex."(".$tintalpha.")", 'magenta');
+
+	        			//Actually do the tint!
+	        			$GenHelper->tintImage($baseTexture, $copyLocation, $tinthex, $tintalpha);
+        				break;
+        			case 'hue':
+
+        				//Get the hue amount
+        				$hueAmount = intval($element["HueAmount"]);
+        				
+        				//Tell the user (for logging purposes)
+        				$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees", 'magenta');
+
+        				//Actually hue the image!
+        				$GenHelper->hueImage($baseTexture, $copyLocation, $hueAmount);
+        			
+        				break;
+
+        			case 'huedesat':
+
+        				//Get the hue amount
+        				$hueAmount = intval($element["HueAmount"]);
+
+        				//Get the desaturation amount
+        				$desatAmount = intval($element["DesaturationAmount"]);
+
+        				//Tell the user (for logging purposes)
+        				$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees then desaturating by ".$desatAmount."%", 'magenta');
+        			
+        				//Hue and desaturate the image
+        				$GenHelper->hueImageDesat($baseTexture, $copyLocation, $hueAmount,$desatAmount);
+
+        				break;
+        			default:
+
+        				//Tell the user (for logging purposes)
+        				$this->line("Copying: ".$texture.".png to textures folder...", 'magenta');
+
+        				//Copy the sprite straight over
+        				copy($this->getImage($textureFile, $imagesource), Config::get('gen.projectTextureDir')."Items/".$textureFile.".png");
 	        			
-	        			));
-
-        		//save the block class out for this block
-        		$this->line("Saving Class for ".$element["ID"]. " to ".$element["ID"].".java",'yellow');
-
-        		file_put_contents(Config::get('gen.codeDir')."items/".$element['ID'].".java", $content);
-				*/
-
-	        	//add the item to the laoder
+        				break;
+        		}
+        		
+        		
+	        	//Add the item to the loader
 	        	array_push($items, array('id' => $element["ID"], 'name' => $element["Name"], 'texture' => $texture, 'stacksize' => $element["MaxStack"]));
 
         		
         		//create the language string for this item
 	        	$langitem = "item.ChemCraft_".$element["ID"].".name=".$element["Name"];
+
+	        	//Tell the user
 	        	$this->line("Created language string for ".$element["ID"],'yellow');
 
         		//add it to the language array
@@ -139,17 +158,20 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 
 
         	} else {
+
+        		//Nevermind, the item is disabled
 				$this->line("Item (".$element["ID"]. ") is disabled.",'red');
 				continue;
         	}	
-        		
+        	
+        	//Blank line for readability in the console
         	$this->info("");
         }
 
-        //generate the item script
-		//make the blockloader
+        //Generate the Item Loader
 		$this->line("Writing ItemLoader", 'yellow');
-		//generate the code
+
+		//Generate the code
 		$itemloader = View::make('templates.itemloader')->with(array(
 			"items" => $items
 			));
@@ -161,6 +183,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 		$this->info("Done: ItemLoader.java");
         $this->line("");
 
+        //Write out the language file
     	$this->line("Writing Language Files", 'yellow');
     	file_put_contents(Config::get('gen.langDir')."items_en_US.lang", implode(PHP_EOL, $langArray).PHP_EOL);
         $this->info("Lang file: Written ".count($langArray). " strings");
@@ -195,23 +218,6 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 		);
 	}
 
-	private function getImage($name, $source) {
-		switch ($source) {
-			case "cdn":
-				$this->line("Contacting CDN for: assets/Items/".$name.".png",'green');
-				return  Config::get('gen.cdnURL')."Items/".$name.".png";
-			break;
-
-			case "local":
-				return Config::get('gen.spritesDirItems').$name.".png";
-			break;
-
-			case "url":
-				return Config::get('gen.spritesDirItems').$name.".png";
-			break;
-		}
-
-		
-	}
+	
 
 }

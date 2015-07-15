@@ -400,4 +400,71 @@ class GenHelper {
 		return $num;
 	}
 
+	public function getImage($name, $source) {
+
+		$textureFile = "";
+
+		switch ($source) {
+			case "cdn":
+				$this->line("Contacting CDN for: assets/Items/".$name.".png",'green');
+				
+				$textureFile = Config::get('gen.cdnURL')."Items/".$name.".png";
+				
+			break;
+
+			case "local":
+				$textureFile = Config::get('gen.spritesDirItems').$name.".png";
+			break;
+
+			case "url":
+				$textureFile = $this->option('url')."assets/Items/".$name.".png";
+			break;
+
+
+		}
+
+		//Check the item actually exists!
+		if ($this->checkImageExists($name, $source)) {
+			return $textureFile;
+		} else {
+			return Config::get('gen.spritesDirItems')."missing.png";
+		}
+		
+	}
+
+	public function checkImageExists($name, $source) {
+		switch ($source) {
+			case "cdn":
+				$file_headers = @get_headers(Config::get('gen.cdnURL')."assets/Items".$name.".png");
+				if($file_headers[0] == 'HTTP/1.1 404 Not Found') {
+				    return false;
+				}
+				else {
+				    return true;
+				}
+			break;
+
+			case "local":
+				if (file_exists(Config::get('gen.spritesDirItems').$name.".png")) {
+					return true;
+				} else {
+					return false;
+				}
+			break;
+
+			case "url":
+			$file_headers = @get_headers($this->option('url')."assets/Items".$name.".png");
+				if($file_headers[0] == 'HTTP/1.1 404 Not Found') {
+				    return false;
+				}
+				else {
+				    return true;
+				}
+				;
+			break;
+		}
+
+		
+	}
+
 }
