@@ -140,7 +140,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         				$this->line("Copying: ".$texture.".png to textures folder...", 'magenta');
 
         				//Copy the sprite straight over
-        				copy($this->getImage($textureFile, $imagesource), $textureOutput);
+        				copy($GenHelper->getImage($textureFile, $imagesource), $textureOutput);
 	        			
         				break;
         		}
@@ -149,6 +149,9 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         		if($baseTexture == Config::get('gen.spritesDirItems')."missing.png") {
         			//if the texture couldn't be found, then set it to missing
         			$texture = 'missing';
+
+        			$this->line("Cannot copy texture to textures folder (Reason: 'missing'). Using missing.png", 'red');
+	        		
         		} else {
         			//if not, set it to the element ID
         			$texture = $element['ID'];
