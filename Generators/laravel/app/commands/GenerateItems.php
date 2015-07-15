@@ -84,7 +84,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         		$textureFile = $element["BaseSprite"];
 
         		//Get the image from CDN/Local
-        		$baseTexture = $GenHelper->getImage($textureFile, $imagesource);
+        		$baseTexture = $GenHelper->getItemImage($textureFile, $imagesource);
 
         		//Set the output folder
         		$textureOutput = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
@@ -145,10 +145,10 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 		        			$this->line("Cannot copy texture to textures folder (Reason: 'missing'). Using missing.png", 'red');
 			        		
 			        		//no need to actually copy any files
-			        		
+
 		        		} else {
 		        			//Copy the sprite straight over
-        					copy($GenHelper->getImage($textureFile, $imagesource), $textureOutput);
+        					copy($baseTexture, $textureOutput);
 		        		}
         				
 	        			
