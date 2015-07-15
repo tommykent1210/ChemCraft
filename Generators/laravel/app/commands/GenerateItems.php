@@ -198,7 +198,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 	private function getImage($name, $source) {
 		switch ($source) {
 			case "cdn":
-				return  Config::get('gen.cdnURL').$name.".png";
+				return  Config::get('gen.cdnURL')."Items/".$name.".png";
 			break;
 
 			case "local":
