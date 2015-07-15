@@ -440,9 +440,9 @@ class GenHelper {
 
 		switch ($source) {
 			case "cdn":
-				echo "Contacting CDN for: assets/Block/".$name.".png",'green' . PHP_EOL;
+				echo "Contacting CDN for: assets/Blocks/".$name.".png",'green' . PHP_EOL;
 				
-				$textureFile = Config::get('gen.cdnURL')."Block/".$name.".png";
+				$textureFile = Config::get('gen.cdnURL')."Blocks/".$name.".png";
 				
 			break;
 
