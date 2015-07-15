@@ -406,19 +406,19 @@ class GenHelper {
 
 		switch ($source) {
 			case "cdn":
-				$this->line("Contacting CDN for: assets/Items/".$name.".png",'green');
+				echo "Contacting CDN for: assets/Items/".$name.".png";
 				
 				$textureFile = Config::get('gen.cdnURL')."Items/".$name.".png";
 				
 			break;
 
 			case "local":
-			$this->line("Looking for local file: ".Config::get('gen.spritesDirItems').$name.".png",'green');
+				echo "Looking for local file: ".Config::get('gen.spritesDirItems').$name.".png";
 				$textureFile = Config::get('gen.spritesDirItems').$name.".png";
 			break;
 
 			case "url":
-				$this->line("Contacting URL: ".$this->option('url')."assets/Items/".$name.".png",'green');
+				echo "Contacting URL: ".$this->option('url')."assets/Items/".$name.".png";
 				$textureFile = $this->option('url')."assets/Items/".$name.".png";
 			break;
 
@@ -440,7 +440,7 @@ class GenHelper {
 
 		switch ($source) {
 			case "cdn":
-				$this->line("Contacting CDN for: assets/Block/".$name.".png",'green');
+				echo "Contacting CDN for: assets/Block/".$name.".png",'green';
 				
 				$textureFile = Config::get('gen.cdnURL')."Block/".$name.".png";
 				
@@ -448,12 +448,12 @@ class GenHelper {
 
 			case "local":
 
-				$this->line("Looking for local file: ".Config::get('gen.spritesDirBlocks').$name.".png",'green');
+				echo "Looking for local file: ".Config::get('gen.spritesDirBlocks').$name.".png";
 				$textureFile = Config::get('gen.spritesDirBlocks').$name.".png";
 			break;
 
 			case "url":
-				$this->line("Contacting URL: ".$this->option('url')."assets/Blocks/".$name.".png",'green');
+				echo "Contacting URL: ".$this->option('url')."assets/Blocks/".$name.".png";
 				$textureFile = $this->option('url')."assets/Blocks/".$name.".png";
 			break;
 
