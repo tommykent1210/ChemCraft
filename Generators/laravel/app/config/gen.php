@@ -13,4 +13,6 @@ return array(
 
 	'spreadsheetElements' => 'https://docs.google.com/spreadsheets/d/1erWA95MmGF30nQcCpx4h89Z5kxwmbjFv04JSM5nCsoU/export?gid=0&single=true&output=csv',
 	'spreadsheetKey' => '1erWA95MmGF30nQcCpx4h89Z5kxwmbjFv04JSM5nCsoU',
+
+	'cdnURL' => 'http://cdn.chemcraft.info/assets',
 );

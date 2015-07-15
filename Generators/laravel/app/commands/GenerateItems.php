@@ -68,13 +68,14 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 
         		//do image stuff
         		$texture = "";
+        		$imagesource = $this->option('imagesource');
         		//Set the default texture (the block name)
         		$textureFile = $element["BaseSprite"];
 
         		//Does it have a custom texture set?
         		if ($element["SpriteType"] == "Tint") { 
 
-        			$baseTexture = Config::get('gen.spritesDirItems').$textureFile.".png";
+        			$baseTexture = $this->getImage($textureFile, $imagesource);
         			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
         			$tinthex = $element["TintColour"];
         			$tintalpha = $element["TintAlpha"];
@@ -82,14 +83,14 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
         			$GenHelper->tintImage($baseTexture, $copyLocation, $tinthex, $tintalpha);
         			$texture = $element["ID"];
         		} elseif ($element["SpriteType"] == "Hue") {
-        			$baseTexture = Config::get('gen.spritesDirItems').$textureFile.".png";
+        			$baseTexture = $this->getImage($textureFile, $imagesource);
         			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
         			$hueAmount = intval($element["HueAmount"]);
         			$this->line("Altering hue: ".$textureFile.".png by: ".$hueAmount." degrees", 'magenta');
         			$GenHelper->hueImage($baseTexture, $copyLocation, $hueAmount);
         			$texture = $element["ID"];
         		} elseif ($element["SpriteType"] == "HueDesat") {
-        			$baseTexture = Config::get('gen.spritesDirItems').$textureFile.".png";
+        			$baseTexture = $this->getImage($textureFile, $imagesource);
         			$copyLocation = Config::get('gen.projectTextureDir')."items/".$element["ID"].".png";
         			$hueAmount = intval($element["HueAmount"]);
         			$desatAmount = intval($element["DesaturationAmount"]);
@@ -188,8 +189,28 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 	protected function getOptions()
 	{
 		return array(
-			
+			array("imagesource", "isource", InputOption::VALUE_OPTIONAL, "Where would you like to source the images from? Valid options: cdn, local, url", "local"),
+		
+			array("url", "url", InputOption::VALUE_OPTIONAL, "If the image source is URL, tell us where to find it", Config::get("gen.cdnURL")),
 		);
+	}
+
+	private function getImage($name, $source) {
+		switch ($source) {
+			case "cdn":
+				return  Config::get('gen.cdnURL').$name.".png";
+			break;
+
+			case "local":
+				return Config::get('gen.spritesDirItems').$name.".png";
+			break;
+
+			case "url":
+				return Config::get('gen.spritesDirItems').$name.".png";
+			break;
+		}
+
+		
 	}
 
 }
