@@ -198,6 +198,7 @@ class GenerateItems extends Jralph\LaravelArtisanColour\Console\Command {
 	private function getImage($name, $source) {
 		switch ($source) {
 			case "cdn":
+				$this->line("Contacting CDN for: assets/Items/".$name.".png",'green');
 				return  Config::get('gen.cdnURL')."Items/".$name.".png";
 			break;
 
