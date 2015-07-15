@@ -37,40 +37,59 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	 */
 	public function fire()
 	{
-		//
+		//Get the GenHelper instance
 		$GenHelper = new GenHelper();
+
+		//Set the Google Drive key
 		$key = '1erWA95MmGF30nQcCpx4h89Z5kxwmbjFv04JSM5nCsoU';
+		
+		//Set the radioactive range
 		$radioactiveRange = 5;
 
-
+		//Tell the user we're starting
 		$this->line("--[ Building Elements: Started]--", 'yellow');
 		$this->line("Getting spreadsheet from google...", 'yellow');
 		$this->line("");
 
+		//Get the data from Google Drive
     	$arr = $GenHelper->google_spreadsheet_to_array($key);
 
+    	//Get the Image Source option
+    	$imagesource = $this->option('imagesource');
+
+    	//Output the image Source
+    	$this->line("Image Source: ".$imagesource, 'cyan');
+
+    	//Setup the empty block, overworld blocks, and language array
         $blocks = array();
         $langArray = array();
         $overworldGenBlocks = array();
 
+        //Setup element counters
         $elementCount = count($arr);
         $currentElementCount = 0;
-        //var_dump($arr);
+
+        //Loop through the elements
         foreach ($arr as $element) {
+
+        	//Increment the counter
         	$currentElementCount += 1;
-        	//var_dump($element);
-        	//exit;
-        	# code...
+        	 
+        	//Tell the user
         	$this->line("Found Element: ".$element["ID"]. "(".$currentElementCount."/".$elementCount.")",'yellow');
         		
         	//Check if its an Ore or a Mineral (Or not found in nature)
         	if ($element['GenerateOre'] == "TRUE") {
+
+        		//Tell the user the element will be generated
         		$this->info("Element is set to GENERATE");
         		
         		//its an ore
-        		if($element['Type'] == "ore" || $element['Type'] == "Mineral") {
+        		if(strtolower($element['Type']) == "ore" || strtolower($element['Type']) == "mineral") {
 
+        			//Tell the user the type
         			$this->info("Element is of type ".strtoupper($element["Type"]).".");
+
 	        		$texture = "";
 	        		//Set the default texture (the block name)
 	        		$textureFile = $element["ID"];
@@ -78,19 +97,30 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	        		//Does it have a custom texture set?
 	        		if ($element["Texture"]) { $textureFile = $element["Texture"]; }
 
-	        		//Does the texture even exist?
-	        		if (file_exists(Config::get('gen.spritesDir')."Blocks/".$textureFile.".png")) {
+	        		//Get the image from CDN/Local
+	        		$baseTexture = $GenHelper->getBlockImage($textureFile, $imagesource);
+
+	        		//Set the output folder
+	        		$textureOutput = Config::get('gen.projectTextureDir')."blocks/".$element["ID"].".png";
+
+	        		//Is the texture missing?
+	        		if ($baseTexture != Config::get('gen.spritesDirBlocks')."missing.png") {
+
+	        			//Set the texture for minecraft
 	        			$texture = $textureFile;
-	        			//copy the file to the project directory
 
-	        			//echo Config::get('gen.spritesDir').$textureFile.".png"; 
-	        			//echo Config::get('gen.projectTextureDir')."blocks/".$textureFile.".png";
+	        			//Copy the file over
+	        			copy($baseTexture, $textureOutput);
 
-	        			copy(Config::get('gen.spritesDir')."Blocks/".$textureFile.".png", Config::get('gen.projectTextureDir')."blocks/".$textureFile.".png");
+	        			//Tell the user
 	        			$this->line("Copying: ".$texture.".png to textures folder...", 'magenta');
+
 	        		} else {
+
 	        			//Nope! So set it as the "missing.png" image
 	        			$texture = "missing";
+
+	        			//Tell the user
 	        			$this->line("Cannot copy: ".$textureFile.".png to textures folder (Reason: 'missing'). Using missing.png", 'red');
 	        		}
 
@@ -110,58 +140,35 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	        		//add it to the language array
 	        		array_push($langArray, $langitem);
 
+	        		//Tell the user the block is radioactive, this will instantiate GenericBlockRadioactive instead of GenericBlock
 	        		if($element["Radioactive"] == "TRUE") {
 	        			$this->line("Block is radioactive. Adding appropriate code.", 'magenta');
 	
 	        		}
 
-	        		/*//output the java file for the block
-	        		$content = View::make('templates.block')->with(array(
-	        			"OreID" => $element["ID"],
-	        			"OreName" => $element["OreName"],
-	        			"OreTexture" => $texture,
-	        			"ToolClass" => $element["ToolClass"],
-	        			"ToolTier" => $element["ToolTier"],
-	        			"Hardness" => $element["Hardness"],
-	        			"Radioactive" => $element["Radioactive"],
-	        			"RadioactiveRange" => $radioactiveRange
-	        			));
-
-					//add to worldgen stuff
-					$tempWorldGenArr = array(
-						"ID" => $element['ID'],
-						"SpawnChance" => $element['SpawnChance'],
-						"MinVeinSize" => $element['MinVeinSize'],
-						"MaxVeinSize" => $element['MaxVeinSize'],
-						"MinSpawnHeight" => $element['MinSpawnHeight'],
-						"MaxSpawnHeight" => $element['MaxSpawnHeight']
-						);
-					array_push($overworldGenBlocks, $tempWorldGenArr);
-
-	        		//save the block class out for this block
-	        		file_put_contents(Config::get('gen.codeDir')."Blocks/".$element['ID'].".java", $content);
-
-					
-	        		//Tell them we're done
-	        		$this->info("Written Element: ".$element["Name"].".java (Type: '".$element["Type"].$element["GenerateOre"]."')");
-        		
-					*/
+	        		
         		} else {
+
+        			//tell the user we're skipping this block because of the type
         			$this->line("Skipping: ".$element["Name"].". (Reason: 'Wrong Type')",'red');
         			$this->info("");
         			continue;
         		}
         	} else {
+
+        		//tell the user we're skipping the block because we don't need it
         		$this->line("Skipping: ".$element["Name"].". (Reason: 'Don't Generate Ore')",'red');
         		$this->info("");
         		continue;
         	}
         	
+        	//newline for readability in the console
         	$this->info("");
         }
 
     	//make the blockloader
 		$this->line("Writing Blockloader", 'yellow');
+
 		//generate the code
 		$blockloader = View::make('templates.blockloader')->with(array(
 			"blocks" => $blocks
@@ -181,7 +188,7 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 			"overworld" => $overworldGenBlocks
 			));
 
-		//output the blockload.java
+		//output the world generation
 		file_put_contents(Config::get('gen.codeDir')."BlockGeneration.java", $worldGenerator);
 		
 		//tell the user
@@ -218,7 +225,10 @@ class GenerateElements extends Jralph\LaravelArtisanColour\Console\Command {
 	protected function getOptions()
 	{
 		return array(
-			
+			array("imagesource", "isource", InputOption::VALUE_OPTIONAL, "Where would you like to source the images from? Valid options: cdn, local, url", "local"),
+		
+			array("url", "url", InputOption::VALUE_OPTIONAL, "If the image source is URL, tell us where to find it", Config::get("gen.cdnURL")),
+		
 		);
 	}
 
